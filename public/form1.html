@@ -1,0 +1,76 @@
+<!-- //  aya and sewar
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Steps Draw</title>
+    <style>
+        body {
+    background: linear-gradient(to right, #e0ccd5, rgb(219, 169, 198)); /* צבע הרקע באופן הדרגתי - using chatgpt */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: Garamond, Book Antiqua, Palatino, serif;
+    color: rgb(34, 30, 30);
+    font-size: 30pt;
+    text-decoration: underline;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fce4ec;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 8px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+    <h1> Welcome to "Steps Draw" page</h1>
+    <form method="post" action="/submit-form">
+        <label for="num">Enter a number between 1 and 50:</label>
+        <input type="number" id="num" name="num" min="1" max="50" required>
+        <br>
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>

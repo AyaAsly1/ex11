@@ -1,0 +1,118 @@
+<!-- //  aya and sewar
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            background-color: #bdb4b4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .formField {
+            margin-bottom: 20px;
+        }
+
+        .formField label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .formField input[type="text"],
+        .formField input[type="email"],
+        .formField input[type="date"],
+        .formField input[type="password"],
+        .formField input[type="radio"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+
+        .formField i {
+            margin-right: 10px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        fieldset legend {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>Form Registration</h1>
+<form action="/register" method="post">
+    <label for="firstName"><i class="fas fa-user"></i> First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+
+    <label for="surname"><i class="fas fa-user"></i> Last Name:</label>
+    <input type="text" id="surname" name="surname" required><br><br>
+
+    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <fieldset>
+        <legend><i class="fas fa-venus-mars"></i> Gender:</legend>
+        <input type="radio" id="gender_other" name="gender" value="Other">
+        <label for="gender_other">Other</label><br>
+
+        <input type="radio" id="gender_female" name="gender" value="Female">
+        <label for="gender_female">Female</label><br>
+
+        <input type="radio" id="gender_male" name="gender" value="Male" checked>
+        <label for="gender_male">Male</label><br><br>
+    </fieldset>
+
+    <label for="birthdate"><i class="fas fa-calendar-alt"></i> Date of Birth:</label>
+    <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+    <label for="termsCheckbox"><i class="fas fa-check-square"></i> I agree to the terms and conditions:</label>
+    <input type="checkbox" id="termsCheckbox" name="termsCheckbox" required><br><br>
+
+    <label for="password"><i class="fas fa-lock"></i> Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

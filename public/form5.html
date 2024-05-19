@@ -1,0 +1,70 @@
+<!-- //  aya and sewar
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Presenter Poem</title>
+    <meta charset="UTF-8">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            background-color: #bdb4b4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            display: list-item;
+            padding: 7px;
+
+        }
+
+        #send {
+            background-color: #515152;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin: 8px;
+        }
+
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: larger;
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body>
+<h1>Presenter Poem</h1>
+<form method="post" enctype="multipart/form-data" action="/present">
+    <label for="poemfile">Upload Poem File:</label>
+    <input type="file" id="poemfile" name="poemfile" accept=".txt" required>
+    <br>
+    <input type="submit" id="send" value="Present">
+</form>
+</body>
+</html>
